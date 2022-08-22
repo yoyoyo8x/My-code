@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  grid-template-areas: 
+  'h h h h'
+  "lb p p rb"
+  "lb com com rb"
+  "f f f f";
+  grid-auto-rows: 300px;
+}
+
+.grid > div {
+  background-color: orange;
+  border: 1px solid black;
+}
+
+.header {
+    grid-area: h;
+  /* grid-column-start: 1;
+  grid-column-end: 4; */
+  /* grid-column: 1/-1; */
+}
+
+.left-sidebar {
+    grid-area:lb;
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
+  /* grid-row: 2/4; */
+}
+
+.right-sidebar {
+    grid-area: rb;
+  /* grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;*/
+/* grid-column: 3/4;
+grid-row: 2/4; */
+} 
+
+.posts{
+    grid-area: p;
+}
+
+.commnent{
+    grid-area: com;
+}
+
+.footer {
+    grid-area: f;
+  /* grid-column-start: 1;
+  grid-column-end: 4; */
+  /* grid-column:1/-1; */
+}
